@@ -8,6 +8,7 @@ const SelectionLayout = () => {
       <Stack.Screen name="set-one" />
       <Stack.Screen name="set-two" />
       <Stack.Screen name="set-three" />
+      <Stack.Screen name="set-four" />
     </Stack>
   );
 };

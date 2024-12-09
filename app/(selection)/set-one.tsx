@@ -6,12 +6,24 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React, { useState } from 'react';
+import { router } from 'expo-router';
 
 const SetOne = () => {
   const [selectedOption, setSelectedOption] = useState(null);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const RouterPageTwo = () => {
+    if (!selectedOption) {
+      setErrorMessage('Please select an option before proceeding.');
+    } else {
+      setErrorMessage(''); // Clear any previous error message
+      router.push('/(selection)/set-two');
+    }
+  };
 
   const handleOptionSelect = (option: any) => {
     setSelectedOption(option);
+    setErrorMessage(''); // Clear error when an option is selected
   };
 
   return (
@@ -31,25 +43,37 @@ const SetOne = () => {
             source={require('../../assets/images/logokrishi.png')}
           />
         </View>
+
         <Text
           style={{
             color: 'white',
             fontSize: 18,
             marginTop: 20,
-            marginLeft: 10,
           }}
         >
-          Do You have any experience in farming?
+          Do you have any experience in farming?
         </Text>
 
         {/* Radio Buttons */}
-        <View style={{ marginTop: 20, alignItems: 'flex-start', width: '80%' }}>
-          {/* Option: Apple */}
+        <View
+          style={{
+            marginTop: 20,
+            alignItems: 'flex-start',
+            width: '80%',
+          }}
+        >
+          {/* Option: No Experience */}
           <TouchableOpacity
             style={{
               flexDirection: 'row',
               alignItems: 'center',
               marginBottom: 15,
+              borderWidth: 2,
+              borderColor: 'white',
+              paddingLeft: 10,
+              width: 280,
+              paddingTop: 10,
+              paddingBottom: 10,
             }}
             onPress={() => handleOptionSelect('I have no experience')}
           >
@@ -81,12 +105,18 @@ const SetOne = () => {
             </Text>
           </TouchableOpacity>
 
-          {/* Option: Mango */}
+          {/* Option: Some Experience */}
           <TouchableOpacity
             style={{
               flexDirection: 'row',
               alignItems: 'center',
               marginBottom: 15,
+              paddingLeft: 10,
+              width: 280,
+              paddingTop: 10,
+              paddingBottom: 10,
+              borderWidth: 2,
+              borderColor: 'white',
             }}
             onPress={() => handleOptionSelect('I have some experience')}
           >
@@ -118,11 +148,17 @@ const SetOne = () => {
             </Text>
           </TouchableOpacity>
 
-          {/*have lot of experince*/}
+          {/* Option: Lots of Experience */}
           <TouchableOpacity
             style={{
               flexDirection: 'row',
               alignItems: 'center',
+              borderWidth: 2,
+              borderColor: 'white',
+              paddingLeft: 10,
+              width: 280,
+              paddingTop: 10,
+              paddingBottom: 10,
             }}
             onPress={() => handleOptionSelect('I have lots of experience')}
           >
@@ -152,6 +188,47 @@ const SetOne = () => {
             <Text style={{ color: 'white', fontSize: 16 }}>
               I have lots of experience
             </Text>
+          </TouchableOpacity>
+
+          {/* Error Message */}
+          {errorMessage ? (
+            <Text
+              style={{
+                color: 'red',
+                fontSize: 14,
+                marginTop: 10,
+                marginLeft: 5,
+              }}
+            >
+              {errorMessage}
+            </Text>
+          ) : null}
+
+          {/* Next Button */}
+          <TouchableOpacity
+            onPress={RouterPageTwo}
+            style={{
+              borderWidth: 2,
+              borderColor: 'white',
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: 'white',
+              width: 280,
+              height: 45,
+              marginTop: 30,
+            }}
+          >
+            <View>
+              <Text
+                style={{
+                  color: 'black',
+                  fontSize: 20,
+                  textAlign: 'center',
+                }}
+              >
+                Next
+              </Text>
+            </View>
           </TouchableOpacity>
         </View>
       </View>
