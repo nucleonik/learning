@@ -19,7 +19,7 @@ export default function TabLayout() {
         tabBarStyle: {
           backgroundColor: 'black', // Set the tab bar background color to black
           borderTopWidth: 0, // Optional: remove the top border for a cleaner look
-          height: 57,
+          height: Platform.OS === 'ios' ? 80 : 57,
         },
         tabBarActiveTintColor: 'white', // Active icon color
         tabBarInactiveTintColor: '#666666', // Inactive icon shadow color
