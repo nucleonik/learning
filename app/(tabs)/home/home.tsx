@@ -12,7 +12,7 @@ const Home = () => {
   const router = useRouter(); // Get router instance
 
   const navigateToHomePage = () => {
-    router.push('/(tabs)/(home)/home-two'); // Navigate to the second page
+    router.push('/(tabs)/home/home-next'); // Navigate to the second page
   };
 
   return (
@@ -29,13 +29,13 @@ const Home = () => {
           <Image
             resizeMode="contain"
             style={{ height: 80, width: 290, marginTop: 30 }}
-            source={require('../../assets/images/logokrishi.png')}
+            source={require('../../../assets/images/logokrishi.png')}
           />
         </View>
         <View style={{ marginTop: 60 }}>
           <Image
             style={{ height: 200, width: 200 }}
-            source={require('../../assets/images/teacher-education.gif')}
+            source={require('../../../assets/images/teacher-education.gif')}
           />
         </View>
         <View style={{ marginTop: 30, width: 300 }}>

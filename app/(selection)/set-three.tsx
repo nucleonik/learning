@@ -48,7 +48,7 @@ const SetThree = () => {
             color: 'white',
             fontSize: 18,
             marginTop: 20,
-            marginLeft: -95,
+            textAlign: 'center',
           }}
         >
           What is your age group?
@@ -58,8 +58,8 @@ const SetThree = () => {
         <View
           style={{
             marginTop: 20,
-            alignItems: 'flex-start',
-            width: '80%',
+            alignItems: 'center',
+            width: '100%',
           }}
         >
           {/* Option:under 18 */}

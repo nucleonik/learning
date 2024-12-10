@@ -65,10 +65,16 @@ const SignIn = () => {
           contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}
           keyboardShouldPersistTaps="handled"
         >
-          <View style={{ backgroundColor: '#2E2E2E', alignItems: 'center' }}>
+          <View
+            style={{
+              marginTop: -30,
+              backgroundColor: '#2E2E2E',
+              alignItems: 'center',
+            }}
+          >
             <Image
               resizeMode="contain"
-              style={{ height: 70, width: 280 }}
+              style={{ height: 90, width: 280 }}
               source={require('../../assets/images/logokrishi.png')}
             />
             <Text

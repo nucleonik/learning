@@ -49,6 +49,7 @@ const SetTwo = () => {
             fontSize: 18,
             marginTop: 20,
             marginLeft: 10,
+            textAlign: 'center',
           }}
         >
           What best describes you at this moment?
@@ -58,8 +59,8 @@ const SetTwo = () => {
         <View
           style={{
             marginTop: 20,
-            alignItems: 'flex-start',
-            width: '80%',
+            alignItems: 'center',
+            width: '100%',
           }}
         >
           {/* Option: Entreprenuer */}

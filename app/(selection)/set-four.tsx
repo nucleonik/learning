@@ -17,7 +17,7 @@ const SetFour = () => {
       setErrorMessage('Please select an option before proceeding.');
     } else {
       setErrorMessage(''); // Clear any previous error message
-      router.push('/(tabs)/home');
+      router.push('/(tabs)/home/home');
     }
   };
 
@@ -48,18 +48,18 @@ const SetFour = () => {
             color: 'white',
             fontSize: 18,
             marginTop: 20,
-            marginLeft: -30,
+            textAlign: 'center',
           }}
         >
-          What’s your daily learning goal?
+          What is your daily learning goal?
         </Text>
 
         {/* Radio Buttons */}
         <View
           style={{
             marginTop: 20,
-            alignItems: 'flex-start',
-            width: '80%',
+            alignItems: 'center',
+            width: '100%',
           }}
         >
           {/* Option:Intense 20 min a day */}

@@ -30,16 +30,20 @@ const SetOne = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <View
         style={{
-          alignItems: 'center',
           backgroundColor: '#2E2E2E',
           paddingTop: 30,
           minHeight: '100%',
         }}
       >
-        <View>
+        <View style={{ alignItems: 'center' }}>
           <Image
             resizeMode="contain"
-            style={{ height: 70, width: 280, marginTop: 30 }}
+            style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: 70,
+              width: 280,
+            }}
             source={require('../../assets/images/logokrishi.png')}
           />
         </View>
@@ -49,6 +53,7 @@ const SetOne = () => {
             color: 'white',
             fontSize: 18,
             marginTop: 20,
+            textAlign: 'center',
           }}
         >
           Do you have any experience in farming?
@@ -58,8 +63,8 @@ const SetOne = () => {
         <View
           style={{
             marginTop: 20,
-            alignItems: 'flex-start',
-            width: '80%',
+            alignItems: 'center',
+            width: '100%',
           }}
         >
           {/* Option: No Experience */}
